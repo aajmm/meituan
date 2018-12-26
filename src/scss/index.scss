@@ -46,6 +46,25 @@ header {
 section {
     width: 100%;
     @include flex;
+    @include direction(column);
+    .swiper-container {
+        width: 100%;
+        .swiper-wrapper {
+            width: 100%;
+            .list1 {
+                width: 100%;
+                @include box_flex;
+                @include flexWrap(wrap);
+                dl {
+                    @include flex;
+                    @include box_flex;
+                    @include justify;
+                    @include direction(column);
+                    @include align;
+                }
+            }
+        }
+    }
 }
 
 footer {
