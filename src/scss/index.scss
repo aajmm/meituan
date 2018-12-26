@@ -47,21 +47,33 @@ section {
     width: 100%;
     @include flex;
     @include direction(column);
-    .swiper-container {
-        width: 100%;
-        .swiper-wrapper {
+    overflow: hidden;
+    .conList {
+        .swiper-container {
             width: 100%;
-            .list1 {
+            .swiper-wrapper {
                 width: 100%;
-                @include box_flex;
-                @include flexWrap(wrap);
-                dl {
-                    @include flex;
+                .list1 {
+                    width: 100%;
                     @include box_flex;
-                    @include justify;
-                    @include direction(column);
-                    @include align;
+                    @include flexWrap(wrap);
+                    dl {
+                        @include flex;
+                        @include box_flex;
+                        @include justify;
+                        @include direction(column);
+                        @include align;
+                    }
                 }
+            }
+        }
+        .imgBox {
+            width: 100%;
+            margin-top: pxTorem(10px);
+            img {
+                width: 100%;
+                height: pxTorem(300px);
+                margin-top: pxTorem(10px);
             }
         }
     }
