@@ -1,0 +1,65 @@
+@import "_mixin.scss";
+@import "common.scss";
+* {
+    padding: 0;
+    margin: 0;
+    @include sizing;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    @include box_flex;
+    @include direction(column);
+}
+
+header {
+    width: 100%;
+    height: pxTorem(120px);
+    @include direction(column);
+    padding: 0 pxTorem(10px);
+    h3 {
+        width: 100%;
+        height: pxTorem(60px);
+        font-size: pxTorem(20px);
+        line-height: pxTorem(60px);
+    }
+    p {
+        width: 100%;
+        @include flex;
+        background: #F0F1F2;
+        padding: 0 pxTorem(10px);
+        @include box_flex;
+        @include align;
+        span.iconfont {
+            font-size: pxTorem(16px);
+        }
+        input {
+            width: 90%;
+            height: pxTorem(30px);
+            font-size: pxTorem(16px);
+            padding-left: pxTorem(5px);
+        }
+    }
+}
+
+section {
+    width: 100%;
+    @include flex;
+}
+
+footer {
+    width: 100%;
+    height: pxTorem(60px);
+    @include box_flex;
+    dl {
+        @include flex;
+        @include box_flex;
+        @include direction(column);
+        @include justify;
+        @include align;
+        dt.iconfont {
+            font-size: pxTorem(20px);
+        }
+    }
+}
