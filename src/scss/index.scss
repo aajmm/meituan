@@ -59,11 +59,23 @@ section {
                     @include box_flex;
                     @include flexWrap(wrap);
                     dl {
-                        @include flex;
+                        // @include flex;
+                        width: 20%;
                         @include box_flex;
                         @include justify;
                         @include direction(column);
                         @include align;
+                        dt {
+                            width: pxTorem(50px);
+                            height: pxTorem(50px);
+                            img {
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                        dd {
+                            font-size: pxTorem(13px);
+                        }
                     }
                 }
             }
